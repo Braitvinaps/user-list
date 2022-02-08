@@ -13,14 +13,15 @@ const Table = ({ user, search, onDelete }) => {
             </thead>
             {user
                 .filter((val) => {
-                    if (val.username.toLowerCase().includes(search.toLowerCase()) || val.email.toLowerCase().includes(search.toLowerCase())) {
+                    if (search === '') {
                         return val
-                    } else if (search === '') {
+                    } else if (val.username.toLowerCase().includes(search.toLowerCase()) || val.email.toLowerCase().includes(search.toLowerCase())) {
                         return val
                     }
-                })
+                    return 0
+                    })
                 .map((item) => {
-                    const {id, username, email, registration_date, rating } = item
+                    const { id, username, email, registration_date, rating } = item
                     return (
                         <tbody key={id}>
                             <tr>

@@ -1,7 +1,6 @@
-import { useState } from "react"
 
 
-const SearchBlock = ({ search ,setSearch }) => {
+const SearchBlock = ({ search, setSearch }) => {
 
 
     return (

@@ -27,7 +27,7 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h1>Список пользователей</h1>
       <SearchBlock
         setSearch={setSearch}
